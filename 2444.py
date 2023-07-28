@@ -1,15 +1,9 @@
-N=int(input())
-for i in range(2*N-1):
-    if (N<i):
-        for j in range(N-i-1):
-            print(' ',end='')
-        for j in range(2*i+1):
-            print('*',end='')
-    else:
-        for j in range(N-i-1):
-            print(' ',end='')
-        for j in range(2*i+1):
-            print('*',end='')
-    print('')
-
-
+N = int(input())
+for i in range(N):
+    print(" "*(N-i-1),end="")
+    print("*"*(1+2*i),end="")
+    print("")
+for i in range(1,N):
+    print(" "*i,end="")
+    print("*"*(2*(N-i)-1),end="")
+    print("")
