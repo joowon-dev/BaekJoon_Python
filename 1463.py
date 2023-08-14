@@ -1,17 +1,16 @@
 N = int(input())
 count=0
-while(N>1):
-    if(N%3==0 or N%3==1):
-        count+=1
-        if(N%3==1):
-            count+=1
-        N=N//3
-    elif(N%2==0 or N%2==1):
-        count+=1
-        if(N%2==1):
-            count+=1
-        N=N//2
-    else:
-        N-=1
-        count+=1
+arr =[]
+arrtemp=[N]
+while(1 not in arrtemp):
+    arr=[]
+    arr=arrtemp[:]
+    arrtemp=[]
+    for i in arr:
+        if(i%3==0):
+            arrtemp.append(i/3)
+        if(i%2==0):
+            arrtemp.append(i/2)
+        arrtemp.append(i-1)
+    count+=1
 print(count)
