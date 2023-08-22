@@ -1,0 +1,11 @@
+S=int(input())
+temp=1
+count=0
+while(S>=0):
+    S-=temp
+    temp+=1
+    count+=1
+if(S<0):
+    print(count-1)
+else:
+    print(count)
